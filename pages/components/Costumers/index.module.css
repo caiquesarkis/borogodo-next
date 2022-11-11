@@ -1,0 +1,34 @@
+.costumers {
+    background: #F5F5F5;
+}
+
+.costumersTitle {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #030303;
+
+    margin: 0 0 54px;
+    padding-top: 80px;
+}
+
+.costumersImage {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 138px;
+}
+
+@media screen and (max-width: 699px) {
+    .costumersTitle {
+      font-size: 24px;
+      
+      margin: 0 0 67px;
+      padding-top: 94px;
+    }
+    
+    .costumersImage { padding-bottom: 87px }
+}

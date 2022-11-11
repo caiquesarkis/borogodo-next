@@ -1,0 +1,113 @@
+#marketingData { 
+  font-family: 'Poppins';
+  font-style: normal;
+
+  background: #FFA020; 
+}
+
+#marketingDataTitle {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #FAFAFA;
+
+    width: 438px;
+
+    margin: 0 auto 80px;
+    padding-top: 80px;
+}
+
+#marketingDataWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    margin: 0 24px 24px;
+}
+
+#marketingDataWrapper > * {
+    box-sizing: border-box;
+  
+    flex: 0 1 307px;
+  
+    height: 420px;
+  
+    padding: 141px 23px 0;
+  
+    background: #FAFAFA;
+
+    /* Card styling idea: shadow */
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    /* transition: 0.3s; */
+}
+
+/* #marketing-data-wrapper > *:hover {
+    Card styling idea: deeper shadow when hovering (desktop only)
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+} */
+
+.marketingDataPercentages {
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 56px;
+    text-align: center;
+
+    margin: 0 0 24px 0;
+}
+
+#firstPercentage { color: #B434ED; }
+
+#secondPercentage { color: #FF4D97; }
+
+#thirdPercentage { color: #1B8BF1; }
+
+.marketingDataText {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: justify;
+    text-align-last: center;
+    color: #030303;
+
+    margin: 0;
+}
+
+#studySource { padding-bottom: 62px; }
+
+@media screen and (max-width: 699px) {
+    #marketingDataTitle { 
+      font-size: 24px; 
+      
+      width: 297px;
+
+      margin: 0 auto 40px;
+      padding-top: 40px;
+    }
+
+    #marketingDataWrapper { margin-bottom: 16px }
+
+    #marketingDataWrapper > * {
+      flex: 0 1 284px;
+    }
+
+    #marketingDataWrapper > *:nth-child(odd) {
+      display: none;
+    }
+
+    .marketingDataText {
+      text-align: center;
+      
+      width: 230px;
+      
+      margin: 0 auto;
+    }
+
+    #studySource { 
+      width: 234px;
+
+      text-align: center;
+
+      margin: 0 auto;
+      padding-bottom: 40px; 
+    }
+}

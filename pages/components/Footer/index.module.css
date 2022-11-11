@@ -1,0 +1,25 @@
+.footerContainer{
+    height: 74px;
+    background-color: #030303;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContainer p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 38px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+@media (max-width: 1000px) {
+    .footerContainer{
+        height: 119px;
+        padding: 18px 48px;
+    }
+}

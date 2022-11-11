@@ -1,0 +1,409 @@
+/*
+    Primeira container da seção "O que fazemos"
+*/
+
+.whatWeDo {
+    background-color: #fafafa;
+}
+
+.whatWeDoFirstContainerWrapper {
+    height: 768px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.whatWeDoFirstContainerOne
+ {
+    height: 100%;
+    min-width: 479px;
+}
+
+.whatWeDoFirstContainerOne
+ h2 {
+    margin: 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+
+.whatWeDoFirstContainerOneTitleWrapper {
+    width: 100%;
+    height: 256px;
+    background-color: #B434ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatWeDoFirstContainerOne
+ img {
+    width: 100%;
+    height: 512px;
+    object-fit: cover;
+}
+
+.whatWeDoFirstContainerTwo
+ {
+    height: 768px;
+    min-width: 479px;
+    width: 479px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F22DD2;
+}
+
+.whatWeDoFirstContainerTwo
+ p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin: 0 50px 32px 50px;
+}
+
+.whatWeDoFirstContainerTwo
+ button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    width: 266px;
+    height: 56px;
+    border: none;
+    border-radius: 33px;
+    margin: 0 50px;
+}
+
+.whatWeDoFirstContainerTwo
+ button p {
+    margin: 0;
+    color: #E10072;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.whatWeDoFirstContainerYellowBlockOne {
+    height: 512px;
+    background-color: #FFA020;
+    width: 100%;
+    margin-top: 256px;
+}
+
+.whatWeDoFirstContainerYellowBlockTwo {
+    height: 256px;
+    width: 100%;
+    background-color: #FFA020;
+    margin-top: 256px;
+}
+
+
+/*
+    Segundo container da seção "O que fazemos"
+*/
+
+.whatWeDoSecondContainerWrapper {
+    height: 768px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.whatWeDoSecondContainerOne
+ {
+    width: 479px;
+    height: 768px;
+    background-color: #1B8BF1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatWeDoSecondContainerOne
+ p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    padding: 0 50px;
+}
+
+.whatWeDoSecondContainerTwo {
+    width: 479px;
+    height: 768px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatWeDoSecondContainerTwo h2 {
+    width: 273px;
+    height: 112px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #030303;
+}
+
+.whatWeDoSecondContainerTwo span {
+    color: #e10072;
+}
+
+/*
+    Terceiro container da seção "O que fazemos"
+*/
+
+.whatWeDoThirdContainerOne {
+    display: flex;
+}
+
+.whatWeDoThirdContainerTitle {
+    height: 256px;
+    width: 70%;
+    background-color: #FFA020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.whatWeDoThirdContainerTitle h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.whatWeDoThirdContainerTitle span {
+    color: #030303;
+}
+
+.whatWeDoThirdContainerPurpleBox {
+    background-color: #B434ED;
+    height: 256px;
+    width: 20%;
+}
+
+.whatWeDoThirdContainerTwo {
+    display: flex;
+    justify-content: flex-end;
+    height: 514px;
+}
+
+.whatWeDoThirdContainerCaseText {
+    width: 479px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatWeDoThirdContainerCaseText p {
+    padding: 0 50px;
+    max-height: 100%;
+    max-width: 352px;
+    margin: 0;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #030303;
+}
+
+.whatWeDoThirdContainerCaseImag
+e {
+    height: 100%;
+    width: 540px;
+}
+
+.whatWeDoThirdContainerBlueBox
+
+ {
+    background-color: #1B8BF1;
+    height: 150px;
+    width: 13%;
+    align-self: flex-end;
+}
+
+
+@media (max-width: 1000px) {
+
+    /*
+        Primeira container da seção "O que fazemos"
+    */
+    .whatWeDoFirstContainerWrapper {
+        display: block;
+        position: relative;
+        margin-top: 50px;
+        height: initial;
+    }
+
+    .whatWeDoFirstContainerYellowBlockOne {
+        display: none;
+    }
+
+    .whatWeDoFirstContainerYellowBlockTwo {
+        display: none;
+    }
+
+    .whatWeDoFirstContainerOne
+ {
+        height: initial;
+        min-width: 100%;
+    }
+
+    .whatWeDoFirstContainerTwo
+ button {
+        display: none;
+    }
+
+    .whatWeDoFirstContainerOneTitleWrapper {
+        margin-top: -25px;
+        width: 85%;
+        height: 130px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .whatWeDoFirstContainerTwo
+ {
+        min-width: 100%;
+        display: block;
+        width: 100%;
+        height: initial;
+    }
+
+    .whatWeDoFirstContainerTwo
+ p {
+        padding: 150px 24px 300px 24px;
+        margin: 50px auto 0 auto;
+        max-width: 374px;
+    }
+
+    .whatWeDoFirstContainerOne
+ img {
+        position: absolute;
+        z-index: 1;
+        width: 291px;
+        height: 311px;
+        right: 0;
+        bottom: -42px;
+    }
+
+    .whatWeDoFirstContainerOne h2 {
+        font-size: 24px;
+    }
+
+
+
+    /*
+        Segundo container da seção "O que fazemos"
+    */
+
+    .whatWeDoSecondContainerWrapper {
+        flex-direction: column-reverse;
+    }
+
+    .whatWeDoSecondContainerTwo {
+        width: 100%;
+        height: 234px;
+        margin: 82px 0 40px 0;
+    }
+
+    .whatWeDoSecondContainerOne{
+        width: 100%;
+    }
+
+    .whatWeDoSecondContainerOne p {
+        max-width: 374px;
+        padding: 0 24px;
+    }
+
+    .whatWeDoSecondContainerTwo h2 {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 250px; 
+    }
+
+    .whatWeDoThirdContainerTitle h2 {
+        font-size: 24px;
+    }
+
+    /*
+        Segundo container da seção "O que fazemos"
+    */
+
+    .whatWeDoThirdContainerPurpleBox {
+        display: none;
+    }
+
+    .whatWeDoThirdContainerBlueBox{
+        display: none;
+    }
+
+    .whatWeDoThirdContainerWrapper{
+        position: relative;
+    }
+
+    .whatWeDoThirdContainerOne {
+        position: absolute;
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    .whatWeDoThirdContainerTwo {
+        flex-direction: column;
+        justify-content: unset;
+        padding: 196px 0 300px 0;
+        height: initial;
+    }
+
+    .whatWeDoThirdContainerTitle {
+        width: 85%;
+        height: 130px;
+    }
+
+    .whatWeDoThirdContainerCaseImage {
+        width: 334px;
+        height: 318px;
+        bottom: -50px;
+        right: 0px;
+        position: absolute;
+    }
+
+    .whatWeDoThirdContainerCaseText p {
+        max-width: 374px;
+        padding: 0 24px;
+    }
+
+    .whatWeDoSecondContainerTwo h2 {
+        font-size: 24px;
+    }
+}
