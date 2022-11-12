@@ -1,10 +1,11 @@
 import '../styles/globals.css'
 
-import Banner from './components/Banner';
 import Navbar from './components/Navbar';
+import Banner from './components/Banner';
+import WhatWeDo from './components/WhatWeDo';
 import Costumers from './components/Costumers';
 import MarketingData from './components/MarketingData';
-import WhatWeDo from './components/WhatWeDo';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function MyApp() {
@@ -15,6 +16,7 @@ function MyApp() {
       <WhatWeDo/>
       <Costumers/>
       <MarketingData/>
+      <Contact/>
       <Footer/>
     </>
   )
