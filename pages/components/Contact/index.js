@@ -37,31 +37,39 @@ export default function Contact() {
       </div>
 
       <form id={styles.contactForm} onSubmit={handleSubmit}>
-        <label className={styles.contactFormLabel}>
+
+        <label>
           <h3 className={styles.formTitle}>Nome</h3>
+          
           <input 
             type="text"
+            name="nome"
             className={styles.formInput}
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
           />
         </label>
-        <label className={styles.contactFormLabel}>
+
+        <label>
           <h3 className={styles.formTitle}>Empresa</h3>
           <input
             type="text"
+            name="empresa"
             className={styles.formInput}
             value={company}
             onChange={(e) => setCompany(e.target.value)}
             required
           />
         </label>
-        <label className={styles.contactFormLabel}>
+
+        <label>
           <h3 className={styles.formTitle}>Tamanho da empresa</h3>
+
           <select
             id={styles.multiSelection}
             className={styles.formInput}
+            name="tamanho-da-empresa"
             value={companySize}
             onChange={(e) => setCompanySize(e.target.value)}
             required
@@ -71,38 +79,48 @@ export default function Contact() {
             <option value="more-than-fifty">Acima de 50 funcionários</option>
           </select>
         </label>
-        <label className={styles.contactFormLabel}>
+        
+        <label>
           <h3 className={styles.formTitle}>E-mail</h3>
+
           <input
             type="email"
+            name="email"
             className={styles.formInput}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </label>
-        <label className={styles.contactFormLabel}>
+
+        <label>
           <h3 className={styles.formTitle}>Mensagem</h3>
+
           <textarea
             className={styles.formInput}
-            id={styles.desktop}
+            id={styles.messageFieldDesktop}
+            name="mensagem"
             placeholder="Conte-nos um pouco do que precisa"
             rows="1"
-            required
             value={message} 
             onChange={(e) => setMessage(e.target.value)}
+            required
           ></textarea>
+
           <textarea
             className={styles.formInput}
-            id={styles.mobile}
+            id={styles.messageFieldMobile}
+            name="mensagem"
             placeholder="Conte-nos o que precisa"
             rows="1"
-            required
             value={message} 
             onChange={(e) => setMessage(e.target.value)}
+            required
           ></textarea>
         </label>
-        <button id={styles.contactCta}>BORA CONVERSAR!</button>
+
+          <button id={styles.contactCta} name="botao-para-contato"> BORA CONVERSAR! </button>
+
       </form>
 
     </section>
