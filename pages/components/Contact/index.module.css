@@ -46,7 +46,7 @@
   box-sizing: border-box;
 }
 
-.formTitles,
+.formTitle,
 textarea#desktop::placeholder,
 textarea#mobile::placeholder {
   font-style: normal;
