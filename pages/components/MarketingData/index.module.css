@@ -1,5 +1,4 @@
 #marketingData { 
-  font-family: 'Poppins';
   font-style: normal;
 
   background: #FFA020; 
@@ -17,6 +16,8 @@
     margin: 0 auto 80px;
     padding-top: 80px;
 }
+
+/* Cards section */
 
 #marketingDataWrapper {
     display: flex;
@@ -42,7 +43,7 @@
     /* transition: 0.3s; */
 }
 
-/* #marketing-data-wrapper > *:hover {
+/* #marketingDataWrapper > *:hover {
     Card styling idea: deeper shadow when hovering (desktop only)
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 } */
@@ -56,11 +57,11 @@
     margin: 0 0 24px 0;
 }
 
-#firstPercentage { color: #B434ED; }
+#firstPercentage { color: #B434ED }
 
-#secondPercentage { color: #FF4D97; }
+#secondPercentage { color: #FF4D97 }
 
-#thirdPercentage { color: #1B8BF1; }
+#thirdPercentage { color: #1B8BF1 }
 
 .marketingDataText {
     font-size: 16px;
@@ -72,9 +73,18 @@
     margin: 0;
 }
 
-#studySource { padding-bottom: 62px; }
+/* Swiper cards navigation carousel */
 
-@media screen and (max-width: 699px) {
+#carouselWrapper { display: none }
+
+#studySource { 
+  padding-bottom: 62px;
+  text-align: center;
+}
+
+/* Mobile version */
+
+@media screen and (max-width: 939px) {
     #marketingDataTitle { 
       font-size: 24px; 
       
@@ -84,15 +94,68 @@
       padding-top: 40px;
     }
 
-    #marketingDataWrapper { margin-bottom: 16px }
+    #marketingDataWrapper { display: none }
 
-    #marketingDataWrapper > * {
-      flex: 0 1 284px;
+    /* Swiper cards navigation carousel */
+
+    #mySwiper {
+        min-width: 240px;
+        max-width: 284px;
+        height: 420px;
+
+        margin: 0;      
     }
 
-    #marketingDataWrapper > *:nth-child(odd) {
-      display: none;
+    #carouselWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 24px 24px;
     }
+
+    /* .swiper-wrapper > * {
+        box-sizing: border-box;
+      
+        height: 420px;
+      
+        padding: 141px 23px 0;
+      
+        background: #FAFAFA;
+    } */
+
+    .swiperButton {
+        background-color: #FF4D97;
+
+        width: 44px;
+        height: 44px;
+
+        border-style: none;
+        border-radius: 100%;
+    }
+
+    button#prev, button#next {
+        margin: -22px;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    button#prev::after, button#next::after {
+        width: 11px;
+        height: 22px;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 22px;
+        text-align: center;
+        color: #FFF;
+    }
+
+    button#prev::after { content: '<' }
+
+    button#next::after { content: '>' }
+
+    /* .swiper-button-prev, .swiper-button-next { display: none } */
 
     .marketingDataText {
       text-align: center;
@@ -103,7 +166,7 @@
     }
 
     #studySource { 
-      width: 234px;
+      width: auto;
 
       text-align: center;
 
