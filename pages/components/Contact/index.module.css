@@ -1,0 +1,196 @@
+/* Contact page and its pink block with title */
+
+#contactPage {
+  display: flex;
+  justify-content: center;
+
+  background-color: #FAFAFA;
+
+  padding: 0 24px;
+}
+
+#contactTitleBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 479px;
+  height: 768px;
+
+  margin-right: 72px;
+
+  background-color: #FF4D97;
+}
+
+#contactTitle {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  color: #FFFFFF;
+
+  width: 257px;
+}
+
+/* Formulary */
+
+#contactForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 479px;
+  height: 768px;
+
+  box-sizing: border-box;
+}
+
+.formTitle,
+textarea#desktop::placeholder,
+textarea#mobile::placeholder {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 38px;
+
+  margin: 0 0 6px;
+  padding-left: 2px;
+}
+
+textarea#desktop::placeholder,
+textarea#mobile::placeholder {
+  font-weight: 400;
+  line-height: 26px;
+
+  margin: 0;
+
+  color: #000;
+}
+
+.formInput {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid;
+  box-sizing: border-box;
+
+  width: 411px;
+  margin-bottom: 24px;
+  padding: 0 4px;
+
+  outline: none;
+}
+
+.formInput:focus {
+  border-bottom: 4px solid #262626;
+}
+
+.formInput[type="text"], 
+.formInput[type="email"], 
+select#multiSelection {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 26px;
+
+  padding: 0;
+}
+
+textarea#desktop, textarea#mobile {
+  font-style: normal;
+  font-size: 16px;
+
+  resize: none;
+
+  min-height: 28px;
+
+  margin-bottom: 40px;
+
+  overflow-y: scroll;
+}
+
+textarea#mobile {
+display: none;
+}
+
+/* Button */
+
+#contactCta {
+  cursor: pointer;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFF;
+  text-decoration: none;
+
+  background: linear-gradient(90deg, #E10072 23.83%, #E10072 77.54%);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 33px;
+
+  width: 203px;
+  height: 56px;
+}
+
+/* Button animation idea: to indicate it's clickable, besides the cursor pointer */
+
+#contactCta:hover {
+  color: #E10072;
+
+  background: linear-gradient(90deg, #FFF 23.83%, #FFF 77.54%);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile version */
+
+@media screen and (max-width: 939px) {
+  #contactPage {
+      display: block;
+
+      padding: 0;
+  }
+
+  #contactTitleBlock {
+      width: 85%;
+      height: 132px;
+
+      margin-top: 25px;
+}
+
+  #contactTitle {
+      font-size: 24px;
+      line-height: 30px;
+  }
+
+  /* Formulary mobile */
+
+  #contactForm {
+      align-items: center;
+
+      width: auto;
+      max-width: 361px;
+      max-height: 673px;
+
+      margin: 0 auto;
+      padding: 0 24px;
+  }
+
+  .formInput {
+      width: 288px;
+  }
+
+  textarea#desktop {
+      display: none;
+  }
+
+  textarea#mobile {
+      display: inline-block;
+  }
+
+  /* Button mobile */
+
+  #contactCta {
+      align-self: center;
+  }
+}

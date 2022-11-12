@@ -22,6 +22,8 @@
     padding-bottom: 138px;
 }
 
+/* Mobile version */
+
 @media screen and (max-width: 699px) {
     .costumersTitle {
       font-size: 24px;
