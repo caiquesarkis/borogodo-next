@@ -25,8 +25,17 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const postTest = { name, company, companySize, email, message };
-    console.log(postTest)
+    const postData = { name, company, companySize, email, message };
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(postData)
+    }).then(res=>{
+      console.log(res,"el")
+    })
   }
 
   return (
@@ -66,9 +75,9 @@ export default function Contact() {
             onChange={(e) => setCompanySize(e.target.value)}
             required
           >
-            <option value="up-to-ten">Até 10 funcionários</option>
-            <option value="between-ten-and-fifty">Entre 10 e 50 funcionários</option>
-            <option value="more-than-fifty">Acima de 50 funcionários</option>
+            <option value="Até 10 funcionários">Até 10 funcionários</option>
+            <option value="Entre 10 e 50 funcionários">Entre 10 e 50 funcionários</option>
+            <option value="Acima de 50 funcionários">Acima de 50 funcionários</option>
           </select>
         </label>
         <label className={styles.contactFormLabel}>
