@@ -1,10 +1,9 @@
 .navbar{
-    height: 80px;
     background-color: #FAFAFA;
 }
 
 .navbarContainer{
-    height: 100%;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     max-width: 1000px;
@@ -24,9 +23,8 @@
     list-style: none;
 }
 
-
-.navbarLinksMobileWrapper{
-    display: none;
+.navbarLinksMobile{
+   display: none; 
 }
 
 .navbarLink{
@@ -55,6 +53,7 @@
     }   
 
     .navbarLinksMobile{
+        display: block;
         position: relative;
         flex-direction: column;
         z-index: 3;
@@ -67,21 +66,26 @@
         margin: 0;
     }
 
-    .navbarLinksMobileWrapper{
+    .navbarLinksMobile li{
+        height: 44px;
         display: flex;
-        min-height: 100%;
-        width: 100%;
-        background-color: rgba(43, 43, 43, 0.61);
-        backdrop-filter: blur(1px);
-        z-index: 3;
-        position: absolute;
-        left: 0;
-        top: 0;
+        align-items: center;
+        padding: 0 24px;
+        background-color: #FAFAFA;
     }
 
-    .navbarLinksMobile li{
-        padding: 0 24px;
-        border-bottom: 1px rgb(193, 193, 193) solid;
+
+    .navbarLinksMobile li a{
+        height: 100%;
+        width: 100%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+    }
+
+
+    .navbarLinksMobile li:nth-child(odd){
+        background-color: white;
     }
 
     .navbarLinksMobile li:hover{

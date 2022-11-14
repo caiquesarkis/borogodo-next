@@ -39,7 +39,7 @@ export default function Contact() {
   }
 
   return (
-    <section id={styles.contactPage}>
+    <section id="contact-form" className={styles.contactPage}>
 
       <div id={styles.contactTitleBlock}>
         <h2 id={styles.contactTitle}>Vamos bater um papo?</h2>

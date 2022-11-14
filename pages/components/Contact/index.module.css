@@ -1,6 +1,6 @@
 /* Contact page and its pink block with title */
 
-#contactPage {
+.contactPage {
   display: flex;
   justify-content: center;
 

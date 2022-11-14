@@ -18,9 +18,19 @@ export default function Navbar() {
           <li><a className={styles.navbarLink} href="#marketing-data">PORQUÊ</a></li>
           <li><a className={styles.navbarLink} href="#contact-form">CONTATO</a></li>
         </ul>
-        
+       {!isOpen &&
+          <button onClick={handleHamburguer} className={styles.navbarHamburguer}>
+            <Image width={25} height={21} src="/hamburguer-icon.png"/>
+          </button>
+        }
         {isOpen &&
-        <div className={styles.navbarLinksMobileWrapper}>
+          <button onClick={handleHamburguer} className={styles.navbarHamburguer}>
+            <Image width={25} height={21} src="/hamburguer-icon.png"/>
+          </button>
+        }
+       </div>
+        {isOpen &&
+        <div>
           <ul className={styles.navbarLinksMobile}>
             <li><a className={styles.navbarLink} href="#whatwedo">O QUE FAZEMOS</a></li>
             <li><a className={styles.navbarLink} href="#costumers">CLIENTES</a></li>
@@ -29,12 +39,6 @@ export default function Navbar() {
           </ul>
         </div>
        }
-        {!isOpen &&
-          <button onClick={handleHamburguer} className={styles.navbarHamburguer}>
-            <Image width={25} height={21} src="/hamburguer-icon.png"/>
-          </button>
-        }
-      </div>
        </nav>
   );
 }
