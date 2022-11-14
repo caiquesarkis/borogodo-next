@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbarContainer}>
-        <Image className={styles.navbarLogo} width={114} height={50} src="/logo.png"/>
+        <Image className={styles.navbarLogo} alt="Logo da Borogodó" width={114} height={50} src="/logo.png"/>
         <ul className={styles.navbarLinks}>
           <li><a className={styles.navbarLink} href="#whatwedo">O QUE FAZEMOS</a></li>
           <li><a className={styles.navbarLink} href="#costumers">CLIENTES</a></li>
@@ -20,12 +20,12 @@ export default function Navbar() {
         </ul>
        {!isOpen &&
           <button onClick={handleHamburguer} className={styles.navbarHamburguer}>
-            <Image width={25} height={21} src="/hamburguer-icon.png"/>
+            <Image alt="Icone hamburguer" width={25} height={21} src="/hamburguer-icon.png"/>
           </button>
         }
         {isOpen &&
           <button onClick={handleHamburguer} className={styles.navbarHamburguer}>
-            <Image width={25} height={21} src="/hamburguer-icon.png"/>
+            <Image alt="Icone hamburguer" width={25} height={21} src="/hamburguer-icon.png"/>
           </button>
         }
        </div>
