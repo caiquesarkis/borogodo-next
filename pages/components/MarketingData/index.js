@@ -1,4 +1,4 @@
-import { useRef }from 'react';
+import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
 
@@ -13,7 +13,7 @@ export default function MarketingData() {
   const swiperRef = useRef();
 
   return (
-    <section id={styles.marketingData}>
+    <section id="marketing-data" className={styles.marketingData}>
       <h2 id={styles.marketingDataTitle}>Por que usar o marketing de influência?</h2>
       
       <div id={styles.marketingDataWrapper}>

@@ -6,14 +6,14 @@ export default function Banner() {
     <section className={styles.banner}>
       <div className={styles.bannerWrapper}>
 
-        <Image className={styles.bannerImage} width={1366} height={768} src="/banner-image.png"/>
+        <Image className={styles.bannerImage} width={1366} height={768} alt="Influenciadora futurista" src="/banner-image.png"/>
         <div className={styles.bannerContent}>
           <h1 className={styles.bannerTitle}>Não somos gurus digitais, nem fazemos magia.</h1>
           <h3 className={styles.bannerSubtitle}>
             Mas podemos te ajudar e muito! Nós somos o Borogodó que faltava para
             acelerar o seu negócio no mundo digital!
           </h3>
-          <a className={styles.bannerCta} href="/"><p>MAPEAR INFLUENCIADORES</p></a>
+          <a className={styles.bannerCta} href="#contact-form"><p>MAPEAR INFLUENCIADORES</p></a>
         </div>
         
       </div>

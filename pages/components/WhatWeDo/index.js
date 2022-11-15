@@ -10,7 +10,7 @@ export default function WhatWeDo() {
           <div className={styles.whatWeDoFirstContainerOneTitleWrapper}>
             <h2>O que fazemos?</h2>
           </div>
-          <Image width={479} height={512} src="/o-que-fazemos.png" />
+          <Image alt="O que fazemos" width={479} height={512} src="/o-que-fazemos.png" />
         </div>
         <div className={styles.whatWeDoFirstContainerTwo}>
           <p>
@@ -22,7 +22,7 @@ export default function WhatWeDo() {
             estratégia é preciso achar as pessoas certas.
           </p>
           <button>
-            <p>MAPEAR INFLUENCIADORES</p>
+            <a href="#contact-form"><p>MAPEAR INFLUENCIADORES</p></a>
           </button>
         </div>
         <div className={styles.whatWeDoFirstContainerYellowBlockTwo} />
@@ -69,7 +69,7 @@ export default function WhatWeDo() {
               para se tornar também uma referência fashion para a geração Z.
             </p>
           </div>
-          <Image className={styles.whatWeDoThirdContainerCaseImage} width={540} height={514} src="/influencers.png"/>
+          <Image alt="Influencers" className={styles.whatWeDoThirdContainerCaseImage} width={540} height={514} src="/influencers.png"/>
           <div className={styles.whatWeDoThirdContainerBlueBox}/>
         </div>
       </div>
