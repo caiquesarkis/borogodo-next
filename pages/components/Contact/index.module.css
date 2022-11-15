@@ -46,9 +46,7 @@
   box-sizing: border-box;
 }
 
-.formTitle,
-textarea#desktop::placeholder,
-textarea#mobile::placeholder {
+.formTitle {
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -58,8 +56,8 @@ textarea#mobile::placeholder {
   padding-left: 2px;
 }
 
-textarea#desktop::placeholder,
-textarea#mobile::placeholder {
+#messageFieldDesktop::placeholder,
+#messageFieldMobile::placeholder {
   font-weight: 400;
   line-height: 26px;
 
@@ -71,17 +69,17 @@ textarea#mobile::placeholder {
 .formInput {
   background: transparent;
   border: none;
+  border-radius: 0;
   border-bottom: 2px solid;
   box-sizing: border-box;
 
   width: 411px;
   margin-bottom: 24px;
-  padding: 0 4px;
 
   outline: none;
 }
 
-.formInput:focus {
+.formInput:focus-visible {
   border-bottom: 4px solid #262626;
 }
 
@@ -92,10 +90,21 @@ select#multiSelection {
   font-size: 16px;
   line-height: 26px;
 
-  padding: 0;
+  padding: 0 4px;
 }
 
-textarea#desktop, textarea#mobile {
+/* Error message for invalid email */
+
+.invalidEmail {
+  color: red;
+  margin: -22px 0 22px;
+  padding: 0 4px;
+}
+
+select#multiSelection { appearance: none }
+
+#messageFieldDesktop, 
+#messageFieldMobile {
   font-style: normal;
   font-size: 16px;
 
@@ -108,7 +117,7 @@ textarea#desktop, textarea#mobile {
   overflow-y: scroll;
 }
 
-textarea#mobile {
+#messageFieldMobile {
 display: none;
 }
 
@@ -135,7 +144,8 @@ display: none;
 
 /* Button animation idea: to indicate it's clickable, besides the cursor pointer */
 
-#contactCta:hover {
+#contactCta:hover,
+#contactCta:focus-visible {
   color: #E10072;
 
   background: linear-gradient(90deg, #FFF 23.83%, #FFF 77.54%);
@@ -180,11 +190,11 @@ display: none;
       width: 288px;
   }
 
-  textarea#desktop {
+  #messageFieldDesktop {
       display: none;
   }
 
-  textarea#mobile {
+  #messageFieldMobile {
       display: inline-block;
   }
 

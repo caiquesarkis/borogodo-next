@@ -1,76 +1,82 @@
 import { useState } from 'react';
+import TextareaAutosize from 'react-textarea-autosize';
 
 import styles from "./index.module.css";
 
-// Function to create an auto-resizing textarea
-
-// const textArea = document.getElementsByTagName("textarea");
-// for (let i = 0; i < textArea.length; i++) {
-//   textArea[i].setAttribute("style", "height: " + (textArea[i].scrollHeight) + "px; overflow-y: scroll;");
-//   textArea[i].addEventListener("input", OnInput, false);
-// }
-
-// function OnInput() {
-//   this.style.height = 0;
-//   this.style.height = (this.scrollHeight) + "px";
-// }
-
 export default function Contact() {
+  const [name, setName] = useState('');
+  const [company, setCompany] = useState('');
+  const [companySize, setCompanySize] = useState('Até 10 funcionários');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [invalidEmailError, setInvalidEmailError] = useState(null);
 
-  const [name, setName] = useState('')
-  const [company, setCompany] = useState('')
-  const [companySize, setCompanySize] = useState('10')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const validateEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(String(email).toLowerCase());
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const postData = { name, company, companySize, email, message };
-    fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(postData)
-    }).then(res=>{
-      console.log(res,"el")
-    })
-  }
+
+    if (validateEmail(email)) {
+      const postData = { name, company, companySize, email, message };
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(postData)
+      }).then(res=>{
+        console.log(res,"el")
+      })
+    } else {
+        setInvalidEmailError("Insira um e-mail válido")
+      };
+  };
 
   return (
     <section id="contact-form" className={styles.contactPage}>
 
       <div id={styles.contactTitleBlock}>
-        <h2 id={styles.contactTitle}>Vamos bater um papo?</h2>
+        <h2 id={styles.contactTitle}> Vamos bater um papo? </h2>
       </div>
 
       <form id={styles.contactForm} onSubmit={handleSubmit}>
-        <label className={styles.contactFormLabel}>
-          <h3 className={styles.formTitle}>Nome</h3>
+
+        <label>
+          <h3 className={styles.formTitle}> Nome </h3>
+          
           <input 
             type="text"
+            name="nome"
             className={styles.formInput}
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
           />
         </label>
-        <label className={styles.contactFormLabel}>
-          <h3 className={styles.formTitle}>Empresa</h3>
+
+        <label>
+          <h3 className={styles.formTitle}> Empresa </h3>
           <input
             type="text"
+            name="empresa"
             className={styles.formInput}
             value={company}
             onChange={(e) => setCompany(e.target.value)}
             required
           />
         </label>
-        <label className={styles.contactFormLabel}>
-          <h3 className={styles.formTitle}>Tamanho da empresa</h3>
+
+        <label>
+          <h3 className={styles.formTitle}> Tamanho da empresa </h3>
+
           <select
             id={styles.multiSelection}
             className={styles.formInput}
+            name="tamanho da empresa"
             value={companySize}
             onChange={(e) => setCompanySize(e.target.value)}
             required
@@ -80,38 +86,52 @@ export default function Contact() {
             <option value="50+">Acima de 50 funcionários</option>
           </select>
         </label>
-        <label className={styles.contactFormLabel}>
-          <h3 className={styles.formTitle}>E-mail</h3>
+        
+        <label>
+          <h3 className={styles.formTitle}> E-mail </h3>
+
           <input
             type="email"
+            name="email"
             className={styles.formInput}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </label>
-        <label className={styles.contactFormLabel}>
-          <h3 className={styles.formTitle}>Mensagem</h3>
-          <textarea
+
+        {invalidEmailError 
+        ? <p className={styles.invalidEmail}> {invalidEmailError} </p>
+        : <></>}
+
+        <label>
+          <h3 className={styles.formTitle}> Mensagem </h3>
+
+          <TextareaAutosize
             className={styles.formInput}
-            id={styles.desktop}
+            id={styles.messageFieldDesktop}
+            name="mensagem"
             placeholder="Conte-nos um pouco do que precisa"
-            rows="1"
-            required
+            maxRows={6}
             value={message} 
             onChange={(e) => setMessage(e.target.value)}
-          ></textarea>
-          <textarea
+            required
+          />
+
+          <TextareaAutosize
             className={styles.formInput}
-            id={styles.mobile}
+            id={styles.messageFieldMobile}
+            name="mensagem"
             placeholder="Conte-nos o que precisa"
-            rows="1"
-            required
+            maxRows={4}
             value={message} 
             onChange={(e) => setMessage(e.target.value)}
-          ></textarea>
+            required
+          />
         </label>
-        <button id={styles.contactCta}>BORA CONVERSAR!</button>
+
+          <button id={styles.contactCta} name="botão para contato"> BORA CONVERSAR! </button>
+
       </form>
 
     </section>
