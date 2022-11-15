@@ -93,6 +93,14 @@ select#multiSelection {
   padding: 0 4px;
 }
 
+/* Error message for invalid email */
+
+.invalidEmail {
+  color: red;
+  margin: -22px 0 22px;
+  padding: 0 4px;
+}
+
 select#multiSelection { appearance: none }
 
 #messageFieldDesktop, 
