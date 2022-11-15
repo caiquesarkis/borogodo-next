@@ -13,7 +13,7 @@ export default function Banner() {
             Mas podemos te ajudar e muito! Nós somos o Borogodó que faltava para
             acelerar o seu negócio no mundo digital!
           </h3>
-          <a className={styles.bannerCta} href="/"><p>MAPEAR INFLUENCIADORES</p></a>
+          <a className={styles.bannerCta} href="#contact-form"><p>MAPEAR INFLUENCIADORES</p></a>
         </div>
         
       </div>

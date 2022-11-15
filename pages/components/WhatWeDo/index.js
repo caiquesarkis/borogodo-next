@@ -22,7 +22,7 @@ export default function WhatWeDo() {
             estratégia é preciso achar as pessoas certas.
           </p>
           <button>
-            <p>MAPEAR INFLUENCIADORES</p>
+            <a href="#contact-form"><p>MAPEAR INFLUENCIADORES</p></a>
           </button>
         </div>
         <div className={styles.whatWeDoFirstContainerYellowBlockTwo} />

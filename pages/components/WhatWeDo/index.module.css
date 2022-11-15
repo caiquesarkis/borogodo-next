@@ -87,6 +87,10 @@
     margin: 0 50px;
 }
 
+.whatWeDoFirstContainerTwo button a{
+    text-decoration: none;
+}
+
 .whatWeDoFirstContainerTwo
  button p {
     margin: 0;
