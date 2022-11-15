@@ -19,7 +19,7 @@ export default function Contact() {
 
   const [name, setName] = useState('')
   const [company, setCompany] = useState('')
-  const [companySize, setCompanySize] = useState('up-to-ten')
+  const [companySize, setCompanySize] = useState('10')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
@@ -75,9 +75,9 @@ export default function Contact() {
             onChange={(e) => setCompanySize(e.target.value)}
             required
           >
-            <option value="Até 10 funcionários">Até 10 funcionários</option>
-            <option value="Entre 10 e 50 funcionários">Entre 10 e 50 funcionários</option>
-            <option value="Acima de 50 funcionários">Acima de 50 funcionários</option>
+            <option value="10">Até 10 funcionários</option>
+            <option value="10-50">Entre 10 e 50 funcionários</option>
+            <option value="50+">Acima de 50 funcionários</option>
           </select>
         </label>
         <label className={styles.contactFormLabel}>

@@ -1,12 +1,10 @@
-
-
 const contactForm = (req) =>{
     return(
         `
             <div>
                 <p><mark>Nome</mark>: ${req.body.name}</p>
                 <p><mark>Empresa</mark>: ${req.body.company}</p>
-                <p><mark>Tamanho da empresa</mark>: ${req.body.companySize}</p>
+                <p><mark>Número de colaboradores</mark>: ${req.body.companySize}</p>
                 <p><mark>Email</mark>: ${req.body.email}</p>
                 <p><mark>Mensagem</mark>: ${req.body.message}</p>
             </div>
@@ -17,7 +15,6 @@ const contactForm = (req) =>{
 export default function contact(req, res) {
     require('dotenv').config()
     let nodemailer = require("nodemailer");
-    console.log(process.env.user)
     const transporter = nodemailer.createTransport({
         port: 465,
         host: "smtp.gmail.com",
