@@ -227,6 +227,8 @@
     display: flex;
     justify-content: flex-end;
     height: 514px;
+    margin: auto;
+    width: 958px;
 }
 
 .whatWeDoThirdContainerCaseText {
@@ -251,6 +253,8 @@
     color: #030303;
 }
 
+
+
 .whatWeDoThirdContainerCaseImag
 e {
     height: 100%;
@@ -260,9 +264,11 @@ e {
 .whatWeDoThirdContainerBlueBox
 
  {
-    background-color: #1B8BF1;
+    margin-top: -150px;
+    margin-left: auto;
+    width: 30%;
     height: 150px;
-    width: 13%;
+    background-color: #1B8BF1;
     align-self: flex-end;
 }
 
@@ -398,6 +404,7 @@ e {
         justify-content: unset;
         padding: 196px 0 300px 0;
         height: initial;
+        width: 100%;
     }
 
     .whatWeDoThirdContainerTitle {
