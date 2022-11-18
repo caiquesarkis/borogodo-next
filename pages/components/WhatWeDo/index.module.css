@@ -57,6 +57,17 @@
     background-color: #F22DD2;
 }
 
+.whatWeDoFirstContainerTwo button:hover,
+.whatWeDoFirstContainerTwo button:focus-visible {
+  background: linear-gradient(90deg, #E10072 23.83%, #E10072 77.54%);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.whatWeDoFirstContainerTwo button:hover a p,
+.whatWeDoFirstContainerTwo button:focus-visible a p{
+  color: #fff;
+}
+
 .whatWeDoFirstContainerTwo
  p {
     font-family: 'Poppins';
