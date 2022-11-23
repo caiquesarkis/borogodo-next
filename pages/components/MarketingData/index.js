@@ -49,15 +49,15 @@ export default function MarketingData() {
           }
         }>
           <SwiperSlide>
-            <p className={styles.marketingDataPercentages} id={styles.firstPercentage}> 76% </p>
+            <p className={styles.marketingDataPercentages} id={styles.firstPercentageMobile}> 76% </p>
             <p className={styles.marketingDataText}> dos usuários já compraram algo por meio de indicação de influenciadores </p>
           </SwiperSlide>
           <SwiperSlide>
-            <p className={styles.marketingDataPercentages} id={styles.secondPercentage}> 50% </p>
+            <p className={styles.marketingDataPercentages} id={styles.secondPercentageMobile}> 50% </p>
             <p className={styles.marketingDataText}> costuma pesquisar a opinião de influenciadores digitais antes de comprar produtos e serviços </p>
           </SwiperSlide>
           <SwiperSlide>
-            <p className={styles.marketingDataPercentages} id={styles.thirdPercentage}> 55% </p>
+            <p className={styles.marketingDataPercentages} id={styles.thirdPercentageMobile}> 55% </p>
             <p className={styles.marketingDataText}> acham que recomendações feitas por influencers são menos invasivas do que os anúncios na internet e TV </p>
           </SwiperSlide>
         </Swiper>
