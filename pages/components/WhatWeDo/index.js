@@ -70,8 +70,8 @@ export default function WhatWeDo() {
             </p>
           </div>
           <Image alt="Influencers" className={styles.whatWeDoThirdContainerCaseImage} width={540} height={514} src="/influencers.png"/>
-          <div className={styles.whatWeDoThirdContainerBlueBox}/>
         </div>
+        <div className={styles.whatWeDoThirdContainerBlueBox}/>
       </div>
     </section>
   );

@@ -113,7 +113,7 @@ select#multiSelection { appearance: none }
   min-height: 28px;
 
   margin-bottom: 40px;
-  padding: 0 4px;
+  padding: 0 6px 0 4px;
 
   overflow-y: scroll;
 }
