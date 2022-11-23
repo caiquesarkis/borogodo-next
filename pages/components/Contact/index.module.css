@@ -1,156 +1,165 @@
 /* Contact page and its pink block with title */
 
 .contactPage {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 
-  background-color: #FAFAFA;
+    background-color: #FAFAFA;
 
-  padding: 0 24px;
+    padding: 0 24px;
 }
 
 #contactTitleBlock {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  width: 479px;
-  height: 768px;
+    width: 479px;
+    height: 768px;
 
-  margin-right: 72px;
+    margin-right: 72px;
 
-  background-color: #FF4D97;
+    background-color: #FF4D97;
 }
 
 #contactTitle {
-  font-style: normal;
-  font-weight: 800;
-  font-size: 32px;
-  line-height: 38px;
-  text-align: center;
-  color: #FFFFFF;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #FFFFFF;
 
-  width: 257px;
+    width: 257px;
 }
 
 /* Formulary */
 
 #contactForm {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
-  width: 479px;
-  height: 768px;
+    width: 479px;
+    height: 768px;
 
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.formTitle {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 38px;
+.formLabel {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 38px;
 
-  margin: 0 0 6px;
-  padding-left: 2px;
+    margin: 0 0 6px;
+    padding-left: 2px;
 }
 
 #messageFieldDesktop::placeholder,
 #messageFieldMobile::placeholder {
-  font-weight: 400;
-  line-height: 26px;
+    font-weight: 400;
+    line-height: 26px;
 
-  margin: 0;
+    margin: 0;
 
-  color: #000;
+    color: #000;
 }
 
 .formInput {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  border-bottom: 2px solid;
-  box-sizing: border-box;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid;
+    box-sizing: border-box;
 
-  width: 411px;
-  margin-bottom: 24px;
+    width: 411px;
+    margin-bottom: 24px;
 
-  outline: none;
+    outline: none;
 }
 
 .formInput:focus-visible {
-  border-bottom: 4px solid #262626;
+    border-bottom: 4px solid #262626;
 }
 
 .formInput[type="text"], 
 .formInput[type="email"], 
 select#multiSelection {
-  font-style: normal;
-  font-size: 16px;
-  line-height: 26px;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 26px;
 
-  padding: 0 4px;
+    padding: 0 4px;
 }
 
 /* Error message for invalid email */
 
 .invalidEmail {
-  color: red;
-  margin: -22px 0 22px;
-  padding: 0 4px;
+    font-size: 14px;
+    color: red;
+
+    max-width: 411px;
+
+    margin: -22px 0 22px;
+    padding: 0 4px;
 }
 
-select#multiSelection { appearance: none }
+select#multiSelection { 
+    background: url(/select-arrow.png) right no-repeat;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
 
 #messageFieldDesktop, 
 #messageFieldMobile {
-  font-style: normal;
-  font-size: 16px;
+    font-style: normal;
+    font-size: 16px;
 
-  resize: none;
+    resize: none;
 
-  min-height: 28px;
+    min-height: 28px;
 
-  margin-bottom: 40px;
-  padding: 0 4px;
+    margin-bottom: 40px;
+    padding: 0 4px;
 
-  overflow-y: scroll;
-}
+    overflow-y: scroll;
+  }
 
 #messageFieldMobile {
-display: none;
+    display: none;
 }
 
 /* Button */
 
 #contactCta {
-  cursor: pointer;
+    cursor: pointer;
 
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  color: #FFF;
-  text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFF;
+    text-decoration: none;
 
-  background: linear-gradient(90deg, #E10072 23.83%, #E10072 77.54%);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-  border: none;
-  border-radius: 33px;
+    background: linear-gradient(90deg, #E10072 23.83%, #E10072 77.54%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 33px;
 
-  width: 203px;
-  height: 56px;
+    width: 203px;
+    height: 56px;
 }
 
 /* Button animation idea: to indicate it's clickable, besides the cursor pointer */
 
 #contactCta:hover,
 #contactCta:focus-visible {
-  color: #E10072;
+    color: #E10072;
 
-  background: linear-gradient(90deg, #FFF 23.83%, #FFF 77.54%);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(90deg, #FFF 23.83%, #FFF 77.54%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Mobile version */
