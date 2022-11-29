@@ -6,7 +6,7 @@ import styles from "./index.module.css";
 export default function Contact() {
   const [name, setName] = useState('');
   const [company, setCompany] = useState('');
-  const [companySize, setCompanySize] = useState('Até 10 funcionários');
+  const [companySize, setCompanySize] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [invalidEmailError, setInvalidEmailError] = useState(null);
@@ -19,9 +19,12 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (validateEmail(email)) {
-      const postData = { name, company, companySize, email, message };
-      fetch('/api/contact', {
+    if (!validateEmail(email)) {
+      return setInvalidEmailError("Por favor, insira seu endereço de e-mail no seguinte formato: seunome@exemplo.com")
+    } else {
+        const postData = { name, company, companySize, email, message };
+      
+        fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Accept': 'application/json, text/plain, */*',
@@ -31,9 +34,7 @@ export default function Contact() {
       }).then(res=>{
         console.log(res,"el")
       })
-    } else {
-        setInvalidEmailError("Insira um e-mail válido")
-      };
+    };
   };
 
   return (
@@ -46,7 +47,7 @@ export default function Contact() {
       <form id={styles.contactForm} onSubmit={handleSubmit}>
 
         <label>
-          <h3 className={styles.formTitle}> Nome </h3>
+          <p className={styles.formLabel}> Nome </p>
           
           <input 
             type="text"
@@ -59,7 +60,7 @@ export default function Contact() {
         </label>
 
         <label>
-          <h3 className={styles.formTitle}> Empresa </h3>
+          <p className={styles.formLabel}> Empresa </p>
           <input
             type="text"
             name="empresa"
@@ -71,7 +72,7 @@ export default function Contact() {
         </label>
 
         <label>
-          <h3 className={styles.formTitle}> Tamanho da empresa </h3>
+          <p className={styles.formLabel}> Tamanho da empresa </p>
 
           <select
             id={styles.multiSelection}
@@ -81,14 +82,15 @@ export default function Contact() {
             onChange={(e) => setCompanySize(e.target.value)}
             required
           >
-            <option value="10">Até 10 funcionários</option>
-            <option value="10-50">Entre 10 e 50 funcionários</option>
-            <option value="50+">Acima de 50 funcionários</option>
+            <option value=""> Selecione uma opção </option>
+            <option value="Até 10 funcionários"> Até 10 funcionários </option>
+            <option value="Entre 10 e 50 funcionários"> Entre 10 e 50 funcionários </option>
+            <option value="Acima de 50 funcionários"> Acima de 50 funcionários </option>
           </select>
         </label>
         
         <label>
-          <h3 className={styles.formTitle}> E-mail </h3>
+          <p className={styles.formLabel}> E-mail </p>
 
           <input
             type="email"
@@ -102,10 +104,10 @@ export default function Contact() {
 
         {invalidEmailError 
         ? <p className={styles.invalidEmail}> {invalidEmailError} </p>
-        : <></>}
+        : null}
 
         <label>
-          <h3 className={styles.formTitle}> Mensagem </h3>
+          <p className={styles.formLabel}> Mensagem </p>
 
           <TextareaAutosize
             className={styles.formInput}

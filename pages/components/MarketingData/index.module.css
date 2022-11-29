@@ -57,11 +57,14 @@
     margin: 0 0 24px 0;
 }
 
-#firstPercentage { color: #B434ED }
+#firstPercentage, 
+#firstPercentageMobile { color: #B434ED }
 
-#secondPercentage { color: #FF4D97 }
+#secondPercentage, 
+#secondPercentageMobile { color: #FF4D97 }
 
-#thirdPercentage { color: #1B8BF1 }
+#thirdPercentage, 
+#thirdPercentageMobile { color: #1B8BF1 }
 
 .marketingDataText {
     font-size: 16px;
